@@ -94,33 +94,51 @@ public class ArrayStack<T> implements StackADT<T>
 	 * Returns true if this stack is empty and false otherwise. 
 	 * @return true if this stack is empty
 	 */
+	/**
+	 * if the stack array has more than zero elements, it will return false, otherwise it will return true for the stack array being empty
+	 */
 	public boolean isEmpty()
 	{
 		// To be completed as a Programming Project
 		
-		return true;  // temp
+		return top<=0;
+		
+			
+		
 	}
 
 	/**
 	 * Returns the number of elements in this stack.
 	 * @return the number of elements in the stack
 	 */
+	/**
+	 * returns how many elements are in the stack array
+	 */
 	public int size()
 	{
 		// To be completed as a Programming Project
 		
-		return 0;  // temp
+		return top;
 	}
 
 	/**
 	 * Returns a string representation of this stack. 
 	 * @return a string representation of the stack
 	 */
+	
+	/**
+	 * loops through each element in the stack and appends it to the string builder
+	 */
 	public String toString()
 	{
 		// To be completed as a Programming Project
-		
-		return "";  // temp
+	
+		StringBuilder sb = new StringBuilder();
+		for (int i=0; i < top; i++) {
+			sb.append(stack[i] + " ");
+		}
+		return sb.toString();
+	
 	}
 }
 
